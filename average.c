@@ -7,10 +7,7 @@
 
 #include <stdbool.h>
 
-int minimum(int a, int b)
+double average(double a, double b, double c)
 {
-    if (a < b)
-        return a;
-    else
-        return b;
+    return (a + b + c) / 3;
 }

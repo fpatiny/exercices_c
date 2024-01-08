@@ -5,8 +5,6 @@
  * @note S10a-Fonctions1 Ex1-c
  */
 
-#include <stdbool.h>
-
 int minimum(int a, int b)
 {
     if (a < b)
