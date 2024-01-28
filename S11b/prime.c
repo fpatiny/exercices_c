@@ -2,7 +2,7 @@
  * @file prime.c
  * @author florian.patiny@heig-vd.ch
  * @date 23 january 2024
- * @brief Tells if prime or not
+ * @brief Tells if prime or not.
  * @note COMPILE: gcc prime.c -g -W -Wpedantic -Wextra -o prime
  */
 
@@ -11,16 +11,23 @@
 #include <stdbool.h>
 #include <math.h>
 
+bool is_prime(int userInput);
+
 int main(int argc, char *argv[])
 {
     if (argc < 2)
         return 1;
 
-    // int userInput = atoi(argv[1]);
+    // ----- Get user input -----
+    // Option1: int userInput = atoi(argv[1]);
+    // Option2: sscanf
     int userInput = 0;
     if (sscanf(argv[1], "%d", &userInput) != 1) // sscanf permeet de récuperer un int depuis un char
         return 1;
+}
 
+bool is_prime(int userInput)
+{
     int testValue = (int)ceil(sqrt(userInput));
 
     for (int i = 2; i <= testValue; i++)
